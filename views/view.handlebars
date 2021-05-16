@@ -9,7 +9,7 @@
         <div class="card-footer mb-3">
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="job" id="exampleRadios1" value="engineer" 
-                >
+                {{#if (eq choice.job 'engineer')}} checked {{/if}}>
                 <label class="form-check-label" for="exampleRadios1">
                     Engineer
                 </label>
@@ -25,7 +25,7 @@
         <div class="card-footer mb-3">
             <div class="form-check ">
                 <input class="form-check-input" type="radio" name="job" id="exampleRadios1" value="designer" 
-                    >
+                  {{#if (eq choice.job 'designer')}} checked {{/if}}  >
                 <label class="form-check-label" for="exampleRadios1">
                     Graphic Designer
                 </label>
@@ -41,7 +41,7 @@
         <div class="card-footer mb-3">
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="job" id="exampleRadios1" value="entrepreneur" 
-               >
+                {{#if (eq choice.job 'entrepreneur')}} checked {{/if}}>
                 <label class="form-check-label" for="exampleRadios1">
                     Entrepreneur
                 </label>

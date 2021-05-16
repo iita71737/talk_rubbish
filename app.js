@@ -3,6 +3,10 @@ const exphbs = require('express-handlebars')
 const app = express()
 const port = 3000
 const generateText = require('./generate_talkrubbish')
+const Handlebars = require('handlebars');
+const H = require('just-handlebars-helpers')
+
+H.registerHelpers(Handlebars)
 
 app.use(express.static('public'))
 
@@ -21,7 +25,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
     const choice = req.body
     const text = generateText(req.body)
-    res.render('view', {option: text, choice: choice})
+    res.render('view', { option: text, choice: choice })
 })
 
 app.listen(port, () => {

@@ -14,7 +14,7 @@ function generateTalkrubbish (option) {
     }
     
     let contentHTML = ''
-    console.log(option.job)
+    console.log(option)
 
     switch (option.job) {
         case 'engineer': 
