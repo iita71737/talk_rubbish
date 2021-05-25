@@ -23,9 +23,11 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
+    
     const choice = req.body
-    const text = generateText(req.body)
-    res.render('view', { option: text, choice: choice })
+    const text = generateText(choice)
+    //console.log(text)
+    res.render('view', { text: text, choice: choice })
 })
 
 app.listen(port, () => {

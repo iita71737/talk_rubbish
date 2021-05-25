@@ -1,4 +1,4 @@
-function generateTalkrubbish (option) { 
+function generateTalkRubbish (choice) { 
 
     const task = {
         engineer: ['加個按鈕','加新功能','切個版', '改一點 code'],
@@ -14,22 +14,22 @@ function generateTalkrubbish (option) {
     }
     
     let contentHTML = ''
-    console.log(option)
+    console.log(choice.job)
 
-    switch (option.job) {
+    switch (choice.job) {
         case 'engineer': 
             contentHTML += `
-            身為一個工程師,${task[option.job][randomNumber()]},${phrase[randomNumber()]}吧！
+            身為一個工程師,${task[choice.job][randomNumber()]},${phrase[randomNumber()]}吧！
             ` 
             break;
         case 'designer':
             contentHTML += `
-            身為一個設計師,${task[option.job][randomNumber()]},${phrase[randomNumber()]}吧！
+            身為一個設計師,${task[choice.job][randomNumber()]},${phrase[randomNumber()]}吧！
             ` 
             break;
         case 'entrepreneur':
              contentHTML += `
-            身為一個創業家,${task[option.job][randomNumber()]},${phrase[randomNumber()]}吧！
+            身為一個創業家,${task[choice.job][randomNumber()]},${phrase[randomNumber()]}吧！
             ` 
             break;
     }
@@ -37,4 +37,4 @@ function generateTalkrubbish (option) {
     return contentHTML
 }
 
-module.exports = generateTalkrubbish
+module.exports = generateTalkRubbish
